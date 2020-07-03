@@ -1,0 +1,199 @@
+/* Start of NavBar */
+.navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar ul {
+    display: none;
+}
+/* End of NavBar */
+
+/* Start of Hero */
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.0fr 0.2fr;
+    grid-template-areas: 
+    'headerTitles'
+    'portrait'
+    'arrow';
+    align-content: flex-end;
+}
+
+.portrait {
+    grid-area: portrait;
+    display: grid;
+    align-content: center;
+    margin-right: 0;
+    padding: 0;
+}
+
+.portrait img {
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 1rem;
+}
+
+.headerTitles {
+    grid-area: headerTitles;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.headerTitles p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    opacity: 0.6;
+    font-weight: 300;
+    margin: auto;
+}
+
+h1 {
+    padding-bottom: 1rem;
+    font-size: 3.125rem;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: 11.5625rem;
+    margin-top: 3rem;
+}
+
+.arrow {
+    grid-area: arrow;
+}
+/* End of Hero */
+
+/* Start of Case Studies */
+.container, .Kaeja {
+    margin: 0;
+    /* transform: translateX(-80px); */
+}
+
+.container {
+    padding-left: 0rem;
+    padding-top: 1rem;
+    height: auto;
+}
+
+.Kaeja {
+    background-image: url(../images/kaejaThumbnail.jpg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+.CMHA {
+    background-image: url(../images/cmhaThumbnail.jpg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
+
+.cmhaLogo {
+    display: none;
+}
+
+.top-left {
+    width: 75%;
+    height: 60%;
+    padding: 1rem 1.8rem;
+    background-color: transparent;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+
+}
+
+.role {
+    opacity: 0.6;
+    font-weight: 400;
+    letter-spacing: 1px; 
+    font-size: 0.75rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.description{
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 200;
+    padding-bottom: 2rem;
+    display: none;
+}
+
+.container br {
+    display: none;
+}
+
+.CTA {
+    width: 7rem;
+    font-size: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+}
+/* Case Studies End Here */
+
+/* Start of Footer */
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.foothead {
+    margin-left: 1.75rem;
+    width: 500%;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-top: 0.1875rem;
+    margin-bottom: 1rem;
+}
+
+.options {
+    margin-right: 1.5rem;
+    list-style: none;
+    line-height: 2.25rem;
+    margin-left: 1.75rem;
+}
+
+.Contact {
+    margin-right: 0;
+}
+
+.listHead {
+    font-weight: 500;
+    font-size: 1.125rem;
+    letter-spacing: 1.5px;
+}
+
+.regular {
+    opacity: 0.7;
+    padding-bottom: 3rem;
+}
+
+.sub {
+    opacity: 0.7;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-left: 0;
+    margin-left: 1.75rem
+}
+
+.options ul > :first-child {
+    margin-bottom: 0;
+  }
+
+
+/* End of Footer */

@@ -1,236 +1,695 @@
-* {
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
     background-color: black;
-}
+} 
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    margin: 0px;
-}
-
-.navigation {
-    width: 100%;
-    height: 68px;
-
-}
-
-.navBar {
-    color: white;
-    font-size: 12px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 1.0;
-    margin: 0px 356px 0px 356px;
-    max-height: 90px;
-
-}
-
-.logoWrap {
-    float: left;
-    padding-top: 6px;
-}
-
-.menu {
+ul {
     list-style-type: none;
-    text-align: right;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
 }
 
-.menu li{
-    display: inline-block;
-    padding: 24px 0px 24px 0px;
-    opacity: 0.6;
-    letter-spacing: 2px;
-}
-
-.portrait img {
-    margin-left: 88px;
-    margin-top: 24px;
-    float: left;
+a {
+    text-decoration: none;
+    color: white;
 }
 
 h1 {
-    font-size: 90px;
-    color: white;
+    font-size: 5.625rem;
     font-weight: 800;
-    line-height: 90px;
-    margin-bottom: 18px;
-    margin-top: 0px;
+    line-height: 1;
 }
 
-.headerTitles p {
-    color: white;
-    font-size: 18px;
-    line-height: 27px;
+/* navbar */
+.navbar {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 5.625rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 18.75rem;
+}
+
+.navbar ul {
+    display: flex;
+    letter-spacing: .125rem;
+    cursor: pointer;
+}
+
+.navbar li {
+    padding: .83rem 1.25rem;
+}
+
+.navbar svg {
+    margin-left: 1.25rem;
+}
+
+.dark {
     opacity: 0.6;
+    transition: opacity 300ms ease-in;
 }
 
-.headerTitles {
-    width:25%;
-    float: right;
-    margin-top: 270px;
-    padding-right: 335px;
+.dark:hover {
+    opacity: 1.0;
+}
+/* End of Navbar */
+
+/* Hero */
+.hero {
+    height: 100vh;
 }
 
 .content {
-    max-width: 1920px;
-    height: 875px;
-    margin-bottom: 104px;
-    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1 fr 1fr;
+    grid-template-rows: 1.9fr 0.1fr ;
+    grid-template-areas: 
+    'portrait headerTitles'
+    'arrow arrow';
+    justify-content: center;
 }
 
-.content svg {
-    position: absolute;
-    bottom: 0;
-    padding-left: 90px;
+.portrait {
+    grid-area: portrait;
+    display: grid;
+    align-content: center;
+    padding: 3rem;
+    margin-right: 13rem;
+}
 
-   }
+.portrait img {
+    max-width: 600px;
+    max-height: 600px;
+}
 
-#home {
-    opacity: 1.0;
+.headerTitles {
+    grid-area: headerTitles;
+    display: grid;
+    align-content: center;
+    padding-right: 3rem;
+    margin-right: 8rem;
+}
+
+.arrow {
+    grid-area: arrow;
+    text-align: center;
+    cursor: pointer;
+    margin: 1.875rem 1.25rem;
+    animation: arrow1 2s 1 ease-in-out;
+}
+
+@keyframes arrow1 {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+.headerTitles p {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+h1 {
+    padding-bottom: 1.875rem;
+}
+/* End of Hero Section */
+
+/* Start of Case Studies Section */
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 .Kaeja {
     background-image: url(../images/kaejaThumbnail.jpg);
-    height: 690px;
+    height: 43.125rem;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-left: 48px;
-    margin-right: 48px;
-    padding-left: 40px;
-    padding-top: 30px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 2.5rem;
+    padding-top: 1.875rem;
 }
 
 .CMHA {
     background-image: url(../images/cmhaThumbnail.jpg);
-    height: 690px;
+    height: 43.125rem;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-left: 48px;
-    margin-right: 48px;
-    padding-left: 40px;
-    padding-top: 1px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 2.5rem;
+    padding-top: 1.875rem;
+}
+
+.cmhaLogo {
+    font-size: .75rem;
+    line-height: 1.125rem;
+    position: relative;
+    top: -5rem;
+    left: 6.25rem;
+    opacity: 0.8;
 }
 
 .top-left {
-    width: 450px;
-    padding: 40px 20px 40px 20px;
-    margin-top: 100px; 
+    width: 30%;
+    height: 80%;
+    padding: 0 20px;
     background-color: transparent;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .role {
     opacity: 0.6;
     font-weight: 600;
-    letter-spacing: 1px;
-    background-color: transparent;   
+    letter-spacing: 1px; 
 }
 
 h3{
-    font-size: 50px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: transparent;   
+    font-size: 3.125rem;
+    padding: 1.875rem 0;
 }
 
 .description{
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
     font-weight: 300;
-    padding-bottom: 40px;
-    margin-bottom: 0px;
-    background-color: transparent; 
+    padding-bottom: 1.875rem;
 }
 
 .CTA {
     border-color: white;
     color: white;
-    padding: 14px 18px;
+    padding: 0.874rem 1.125rem;
     font-weight: 600;
     border-width: 1px;
-    background-color: transparent;   
+    background: transparent;  
+    width: 163px; 
+    cursor: pointer;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
 }
 
-footer {
-    max-width: 1920px;
-    max-height: 300px;
-    position: relative;
+.CTA:hover {
+    background-color: white;
+    color: black;
+}
+/* End of Case Studies Section */
+
+
+/* Start of Footer */
+.foot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 9.375rem 20rem 0 20rem;
 }
 
 h4 {
-    font-size: 32px;
-    margin-top: 0px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-top: 0.1875rem;
+    margin-bottom: 1rem;
 }
 
-.optionsMenu {
-    float: left;
-    display: inline-block;
-}
-
-.optionsSocial {
-    float: left;
-    display: inline-block;
-}
-
-.optionsContact {
-    float: left;
-    display: inline-block;
-}
-
-.foothead {
-    float: left;
-    display: inline-block;
-}
-
-.optionsMenu ul {
-    margin-top: 1px;
-    margin-right: 24px;
-    margin-left: 300px;
+.options {
+    margin-right: 1.5rem;
     list-style: none;
-    line-height: 40px;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
 }
 
-.optionsSocial ul {
-    margin-top: 1px;
-    margin-left: 64px;
-    list-style: none;
-    line-height: 40px;
-
+.Contact {
+    margin-right: 0;
 }
 
-.optionsContact ul {
-    margin-top: 1px;
-    margin-left: 64px;
-    list-style: none;
-    line-height: 40px;
-}
-
-.listhead {
+.listHead {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 1.5px;
-    opacity: 1.0;
-}
-
-footer {
-    margin-left: 200px;
-    margin-top: 150px;
-    position: relative;
 }
 
 .regular {
     opacity: 0.7;
-    padding-bottom: 180px;
+    padding-bottom: 11.25rem;
+}
+
+.options ul > :first-child {
+    margin-bottom: 1rem;
+  }
+
+.sub {
+    opacity: 0.7;
+    transition: opacity ease-in 300ms;
+}
+
+.sub:hover {
+    opacity: 1.0;
 }
 
 .copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 300;
     opacity: 0.7;
+    margin-left: 20rem;
+}
+/* End of Footer */
+
+/* About Page */
+.about {
+    height: 100vh;
+}
+
+.aboutMe {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.leaning {
+    padding-top: 30px;
+    transition: all 1s ease-in-out;
+}
+
+.leaning:hover {
+        transform: skew(5deg);
+}
+
+.blurb {
+    max-height: 530px;
+    max-width: 535px;
+}
+
+.blurb h3 {
+    padding-top: 0;
+    margin-bottom: 15px;
+}
+
+.legible {
+    font-weight: 300;
+    line-height: 24px;
+    opacity: 0.7;
+}
+/* End of About Page */
+
+/* Resume Page */
+.resume {
+    height: 75vh;
+}
+
+.experience {
+    height: 70%;
+    margin-left: 320px;
+    margin-right: 320px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.1fr 1fr;
+    grid-template-areas: 
+    'basicInfo basicInfo basicInfo'
+    'endorseArrow endorseArrow download'
+    'skills tools technologies';
+}
+
+.basicInfo {
+    grid-area: basicInfo;
+}
+
+.basicInfo p {
+    padding-bottom: 10px;
+    padding-left: 2px;
+    font-weight: 300;
+}
+
+.basicInfo h3 {
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+.endorseArrow {
+    display: flex;
+    align-items: flex-start;
+    grid-area: endorseArrow;
+    letter-spacing: 0.1rem;
+}
+
+.endorseArrow p {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.7;
+    padding-top: 15px;
+    transition: opacity 300ms ease-in;
+}
+
+.endorseArrow p:hover {
+    opacity: 1.0;
+}
+
+.endorseArrow svg {
+    margin-left: 3px;
+    margin-top: 18px;
+    opacity: 0.7;
+}
+
+.download {
+    grid-area: download;
+    text-align: end;
+    padding-top: 15px;
+}
+
+.download button {
+    display: inline-block;
+}
+
+.skills {
+    grid-area: skills;
+    background: rgba(255, 255, 255, 0.15); 
+    margin-top: 100px;
+    margin-bottom: 25px;
+    padding: 40px 32px;
+    border-right: black 10px solid;
+    border-bottom: black 10px solid;
+}
+
+.capHeader {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.captext {
+    opacity: 0.7;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.tools {
+    grid-area: tools;
+    background: rgba(255, 255, 255, 0.15); 
+    margin-top: 100px;
+    margin-bottom: 25px;
+    padding: 40px 32px;
+    border-right: black 10px solid;
+    border-bottom: black 10px solid;
+}
+
+.technologies {
+    grid-area: technologies;
+    background: rgba(255, 255, 255, 0.15); 
+    margin-top: 100px;
+    margin-bottom: 25px;
+    padding: 40px 32px;
+    border-bottom: black 10px solid;
+}
+
+.history {
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 300px;
+}
+
+.subjectTitle {
+    background-color: rgba(126, 115, 15, .35);
+    width: 26%;
+    animation: bkgcol 2s ease-in;
+}
+
+@keyframes bkgcol {
+    from {
+        background-color: black;
+        width: 0px;
+    }
+
+    to {
+        background-color:rgba(126, 115, 15, .35) ;
+        width: 26%;
+    }
+}
+
+.subjectExp {
+    background-color: rgba(126, 115, 15, .35);
+    width: 35%;
+    animation: bkgExp 2s ease-in;
+}
+
+@keyframes bkgExp {
+    from {
+        background-color: black;
+        width: 0px;
+    }
+
+    to {
+        background-color:rgba(126, 115, 15, .35) ;
+        width: 35%;
+    }
+}
+
+.subjectPro {
+    background-color: rgba(126, 115, 15, .35);
+    width: 31.5%;
+    animation: bkgPro 2s ease-in;
+}
+
+@keyframes bkgPro {
+    from {
+        background-color: black;
+        width: 0px;
+    }
+
+    to {
+        background-color:rgba(126, 115, 15, .35) ;
+        width: 31.5%;
+    }
+}
+
+hr {
+    opacity: 0.2;
+}
+
+.projects {
+    margin-top: 1.5rem;
+}
+
+.projInfo {
+    margin: 75px 0;
+}
+
+.projInfo p {
+    margin: 20px 0;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.projects h3 {
+    font-weight: 600;
+    padding: 0;
+}
+
+h5 {
+    font-size: 1.75rem;
+    opacity: 0.5;
+}
+
+h4 {
+   margin-bottom: 5px; 
+   text-transform: uppercase;
+}
+
+.sop {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 300ms ease-in;
+}
+
+.sop:hover {
+    opacity: 1.0;
+}
+
+.sop svg {
+    margin-top: .1875rem;
+    margin-left: .1875rem;
+}
+
+hr {
+    margin-bottom: 75px;
+}
+
+#two {
+    margin-bottom: 0;
+}
+/* End ofResume Page */
+
+/* Start of Testimonials Page */
+.testimonials {
+    margin: 0 320px;
+    height: 100vh;
+}
+
+.containerone {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review {
+    display: flex;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-top: 3.125rem;
+}
+
+.highlight {
+    background-color: rgba(126, 115, 15, 1.0)
+}
+
+.name {
+    text-transform: uppercase;
+    font-size: .875rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.preface h3 {
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+.preface p {
+    font-weight: 300;
+}
+
+.preface svg {
+    margin-top: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.casper {
+    padding-right: 3rem;
+}
+.shawn {
+    padding-right: 3rem;
+}
+/* End of Testimonials Page */
+
+/* Start of Contact Page */
+.contactForm {
+    height: 100vh;
+}
+
+.entireContain {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contactTitle {
+    padding-right: 20px;
+    padding-bottom: .5rem;
+}
+
+.contactTitle p {
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.contain {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.contactTitle h3 {
+    padding-bottom: 15px ;
+}
+
+.firstLast {
+    margin-right: 1.3rem;
+}
+
+.firstLast input {
+    height: 2.5rem;
+    border-radius: .3125rem;
+    border: none;
+    padding: .5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.email input {
+    height: 2.5rem;
+    border-radius: .3125rem;
+    border: none;
+    padding: .5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+label {
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: .875rem;
+}
+
+input {
+    margin-top: .6rem;
+}
+
+textarea {
+    margin-top: .6rem;
+    border-radius: .3125rem;
+    padding: .75rem .5rem;
+    font-family: 'Inter', sans-serif;
+    margin-right: 5px;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.submit input {
+    border-color: white;
+    color: white;
+    padding: 14px 18px;
+    font-weight: 600;
+    border-width: 1px;
+    background: transparent;  
+    width: 163px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
+}
+
+.submit input:hover {
+    background-color: white;
+    color: black;
 }
