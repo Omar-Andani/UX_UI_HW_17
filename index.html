@@ -15,34 +15,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  // Add smooth scrolling to all links
   $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
-
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 1000, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    } 
   });
 });
 </script>
 </head>
+
 <body>
+ 
     <header>
-      <div class="navbar">
+      <div class="navbar slideAllDown">
         <svg class="logo" width="60" height="40" viewBox="0 0 82 58" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M48.3274 28.6809C48.3274 44.1482 37.57 56.5001 24.5137 56.5001C11.4574 56.5001 0.7 44.1482 0.7 28.6809C0.7 13.2136 11.4574 0.861621 24.5137 0.861621C37.57 0.861621 48.3274 13.2136 48.3274 28.6809Z" stroke="white" stroke-width="1.4"/>
         <line y1="-0.7" x2="60.251" y2="-0.7" transform="matrix(0.428535 0.903525 -0.90194 0.431861 54.1802 0.975639)" stroke="white" stroke-width="1.4"/>
@@ -52,7 +43,7 @@ $(document).ready(function(){
         <ul>
           <li><a href="#section2">PROJECTS</a></li>
           <li><span class="dark"><a href="about.html">ABOUT</a></span></li>
-          <li><span class="dark"><a href="resume.html">Resume</a></span></li>
+          <li><span class="dark"><a href="resume.html">RÉSUMÉ</a></span></li>
           <li><span class="dark"><a href="contact.html">CONTACT</a></span></li>
         </ul>
        </nav>
@@ -60,6 +51,7 @@ $(document).ready(function(){
     </header> <!-- end of nav -->
 
   <!-- Hero Image Starts here -->
+  <div id="main-content">
   <section class="hero">
     <div class="content">
           <div class="portrait">
@@ -86,7 +78,7 @@ $(document).ready(function(){
             <p class="role">UX/UI DESIGNER</p>
             <h3 class="tagline>">DANCE IS FOR<br> EVERYONE</h4>
             <p class="description"><span class="textLess">I was part of the team responsible for redesigning the<br> Kaeja d’Dance website. Our goal was to make the interface<br> more appealing to the many user groups who rely upon it.</span></p>
-            <button class="CTA">VIEW CASE STUDY</button>
+            <a href="kaeja.html"><button class="CTA">VIEW CASE STUDY</button></a>
         </div>
     </div>
     <div class="container CMHA">
@@ -114,7 +106,7 @@ $(document).ready(function(){
             <li><span class="listHead">MENU</span></li>
             <li><a href="#section2"><span class="dark">Projects</a></span></li>
             <li><span class="dark"><a href="about.html">About</a></span></li>
-            <li><span class="dark"><a href="resume.html">Resume</a></span></li>
+            <li><span class="dark"><a href="resume.html">Résumé</a></span></li>
             <li><span class="dark"><a href="contact.html">Contact</a></span></li>
         </ul>
       </div>
@@ -138,4 +130,6 @@ $(document).ready(function(){
   </footer>
   <!--Footer Ends Here-->
 </body>
+<script src="js/index.js"></script>
+</div>
 </html>

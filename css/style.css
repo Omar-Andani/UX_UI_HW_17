@@ -25,6 +25,8 @@ h1 {
     line-height: 1;
 }
 
+div#main-content { display: none; }
+
 /* navbar */
 .navbar {
     font-size: .75rem;
@@ -33,12 +35,27 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.4);
     height: 5.625rem;
     width: 100%;
     position: fixed;
     top: 0;
     padding: 0 18.75rem;
+    z-index: 1;
+}
+
+.slideAllDown {
+    animation: slideDown 1s ease-in;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px ;
+    }
+
+    to {
+        top: 0;
+    }
 }
 
 .navbar ul {
@@ -566,7 +583,18 @@ hr {
 }
 
 .highlight {
-    background-color: rgba(126, 115, 15, 1.0)
+    animation: funGuy 2s ease-in forwards;
+    background-color: rgba(126, 115, 15, .7);
+}
+
+@keyframes funGuy {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: rgba(126, 115, 15, .7);
+    }
 }
 
 .name {
@@ -692,4 +720,158 @@ textarea {
 .submit input:hover {
     background-color: white;
     color: black;
+}
+
+
+/* Start of Kaeja Case Study */
+#overlay {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 585px;  
+}
+
+.containerK {
+    background-image: url(../images/kaejaCase.png);
+    height: 36.5625rem; 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.writing {
+    margin: 0 20rem ;
+    position: absolute;
+    top: 175px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    margin-bottom: 4rem;
+}
+
+.sumContainer {
+    display: flex;
+}
+
+.project {
+    margin-right: 8rem;
+}
+
+.recap {
+    margin-right: 8rem;
+}
+
+.imp {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.liney {
+    line-height: 1.5rem;
+}
+
+.responsibilities ul {
+    line-height: 1.5rem;
+}
+
+.graham {
+    background-image: url(../images/k1.1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 0;
+    width: 100%;
+    padding-top: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 9rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.graham p {
+    position: relative;
+    top: -23rem;
+}
+
+.kaej {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.white {
+    background: white;
+}
+
+.blackText {
+    color: black;
+    line-height: 1.6875rem;
+    font-size: 1.125rem;
+}
+
+.blackText h4 {
+    margin-bottom: 3rem;
+}
+
+.abtCase {
+    width: 50%;
+    margin: 10rem auto;
+}
+
+#desktopFirst {
+    width: 1500px;
+    display: block;
+    margin: 0 auto 10rem auto;
+
+}
+
+.problem {
+    width: 50%;
+    margin: 10rem auto;
+}
+
+.colorBlock {
+    height: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'E76F51 C7C7C7 F4A261 turquoise'
+    'E76F51 blackAttack E9C46A turquoise';
+}
+
+.E76F51 {
+    grid-area: E76F51;
+    background-color: #E76F51;
+}
+.C7C7C7 {
+    grid-area: C7C7C7;
+    background-color: #C7C7C7;
+
+}
+.F4A261 {
+    grid-area: F4A261;
+    background-color: #F4A261;
+}
+
+.E9C46A {
+    grid-area: E9C46A;
+    background-color: #E9C46A;
+}
+
+.blackAttack {
+    grid-area: blackAttack;
+    background-color: #000000;
+}
+
+.turquoise {
+    grid-area: turquoise;
+    background-color: #2A9D8F;
+}
+
+.defineExperience {
+    display: flex;
 }
