@@ -20,7 +20,7 @@ a {
 }
 
 h1 {
-    font-size: 5.625rem;
+    font-size: 4.625rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -87,23 +87,22 @@ div#main-content { display: none; }
     height: 100vh;
 }
 
+#abdus {
+    width: 2% ;
+    margin-top: 5%;
+    border: solid 1px white;
+    opacity: 1.0;
+}
+
 .content {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1 fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1.9fr 0.1fr ;
     grid-template-areas: 
-    'portrait headerTitles'
+    'headerTitles headerTitles'
     'arrow arrow';
     justify-content: center;
-}
-
-.portrait {
-    grid-area: portrait;
-    display: grid;
-    align-content: center;
-    padding: 3rem;
-    margin-right: 13rem;
 }
 
 .portrait img {
@@ -115,8 +114,10 @@ div#main-content { display: none; }
     grid-area: headerTitles;
     display: grid;
     align-content: center;
+    margin-left: 17.8%;
     padding-right: 3rem;
     margin-right: 8rem;
+    margin-top: 2rem;
 }
 
 .arrow {

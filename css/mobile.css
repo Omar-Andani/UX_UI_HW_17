@@ -1,7 +1,12 @@
+
 /* Start of NavBar */
 .navbar {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.navbar svg {
+    margin-left: 0;
 }
 
 .navbar ul {
@@ -14,32 +19,18 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 1.0fr 0.2fr;
+    grid-template-rows: 0.8fr 0.2fr;
     grid-template-areas: 
     'headerTitles'
-    'portrait'
     'arrow';
     align-content: flex-end;
-}
-
-.portrait {
-    grid-area: portrait;
-    display: grid;
-    align-content: center;
-    margin-right: 0;
-    padding: 0;
-}
-
-.portrait img {
-    max-width: 400px;
-    max-height: 400px;
-    margin-bottom: 1rem;
 }
 
 .headerTitles {
     grid-area: headerTitles;
     margin-right: 0;
     padding-right: 0;
+    margin-left: 1rem;
 }
 
 .headerTitles p {
@@ -47,7 +38,7 @@
     line-height: 1.5rem;
     opacity: 0.6;
     font-weight: 300;
-    margin: auto;
+    margin-right: auto;
 }
 
 h1 {
